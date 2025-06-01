@@ -18,6 +18,7 @@ class RecursionMathTest {
     @Test
     public void testDivision() {
         // Add JUnit tests to test your method
+    	assertEquals(2, RecursionMath.recursiveDivision(4, 2));
         fail("Write some tests!");
     }
 
