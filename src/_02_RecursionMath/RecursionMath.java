@@ -20,9 +20,9 @@ if( times == 1) {
     public static int recursiveDivision(int number, int numberToDivideBy) {
 
     	if( numberToDivideBy >= number) {
-	  return number;
+	  return 1;
   			} else {
-  				return number - recursiveDivision(number - numberToDivideBy, numberToDivideBy);
+  				return 1 + recursiveDivision(number - numberToDivideBy, numberToDivideBy);
   				
   			}
   			
@@ -31,7 +31,15 @@ if( times == 1) {
 
     // Try this one on your own!
     public static int recursivePower(int number, int power) {
+    	if( power == 1) { 
+    		return number;
+        	
+        } else {
+        	return recursiveMultiplication(number, recursivePower( number , power - 1));
+        	 
         
-        return 0;
+        }
+    	
+       
     }
 }
